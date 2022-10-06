@@ -1,31 +1,31 @@
-a {
+a{
     text-decoration: none;
 }
 
-.position_left {
+.position_left{
     float: left;
 }
 
-.position_right {
+.position_right{
     float: right;
 }
 
-.cen {
+.cen{
     text-align: center;
 }
 
-.hidd {
+.hidd{
     overflow: hidden;
 }
 
-#marg {
+#marg{
     margin-right: 40px;
 }
 
-#marg2 {
+#marg2{
     margin-right: 40px;
 }
 
-#marg3 {
+#marg3{
     margin-right: 40px;
 }

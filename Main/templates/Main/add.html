@@ -2,9 +2,9 @@
 
 {% block body %}
     {% if page == 'addTask' %}
-    <h3>Добавить задачу:</h3>
+        <h3>Добавить задачу:</h3>
     {% else %}
-    <h3>Редактировать задачу:</h3>
+        <h3>Редактировать задачу:</h3>
     {% endif %}
 
     <form method="post">
@@ -12,10 +12,10 @@
         {{ form.title }}<br>
         {{ form.task }}<br>
         {% if page == 'addTask' %}
-        <button type="submit" class="btn btn-success">Добавить</button>
+            <button type="submit" class="btn btn-success">Добавить</button>
         {% else %}
-        <button type="submit" class="btn btn-warning">Редактировать</button>
+            <button type="submit" class="btn btn-warning">Редактировать</button>
         {% endif %}
-        <span>{{ error }}</span>
+            <span>{{ error }}</span>
     </form>
 {% endblock %}

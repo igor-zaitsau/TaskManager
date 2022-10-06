@@ -27,8 +27,7 @@
         {% if el.done == False %}
         <a href="{% url 'readyTask' el.pk %}" class="text-success" id="marg"><i class="fa-solid fa-folder-open"></i>Выполнено</a>
         {% else %}
-        <a href="{% url 'activateTask' el.pk %}" class="text-primary" id="marg2"><i
-                class="fa-solid fa-code-pull-request"></i>Активировать</a>
+        <a href="{% url 'activateTask' el.pk %}" class="text-primary" id="marg2"><i class="fa-solid fa-code-pull-request"></i>Активировать</a>
         {% endif %}
         <a href="{{ el.get_absolute_url }}" class="text-warning" id="marg3"><i class="fa-solid fa-gears"></i>Редактировать</a>
         <a href="{% url 'deleteTask' el.pk %}" class="text-danger"><i class="fa-solid fa-bug"></i>Удалить</a>
@@ -41,4 +40,4 @@
     {% endif %}
     {% endif %}
 
-{% endblock %}
+    {% endblock %}
