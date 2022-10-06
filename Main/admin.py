@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import *
 
+#login: admin
+#password: admin
+
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('title', 'time_create', 'done')
     list_display_links = ('title',)
