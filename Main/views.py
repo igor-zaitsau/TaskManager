@@ -16,7 +16,7 @@ class ActiveTask(ListView):
 
 
     def get_queryset(self):
-        return Task.objects.filter(done=False)
+        return Task.objects.filter(done=False).order_by('time_update')
 
 
 class DidTask(ListView):
