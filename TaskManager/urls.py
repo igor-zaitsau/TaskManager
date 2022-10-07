@@ -6,3 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Main.urls')),
 ]
+
+handler404 = 'Main.views.error404'

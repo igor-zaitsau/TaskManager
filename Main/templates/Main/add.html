@@ -16,7 +16,7 @@
     {% if title == 'Добавить задачу' %}
       <button type="submit" class="btn btn-success">Добавить</button>
     {% else %}
-      <button type="submit" class="btn btn-warning">Редактировать</button>
+      <button type="submit" class="btn btn-warning" name="next" value="{{ request.path }}">Редактировать</button>
     {% endif %}
       <span>{{ error }}</span>
   </form>

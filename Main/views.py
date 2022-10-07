@@ -1,6 +1,6 @@
-from django.http import HttpResponseNotFound, HttpResponseRedirect
-from django.shortcuts import render, redirect
-from django.views.generic import ListView, UpdateView, DeleteView, FormView, CreateView
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.views.generic import ListView, UpdateView, DeleteView, CreateView
 
 from .models import Task
 from .forms import TaskForm
@@ -63,10 +63,6 @@ class DeleteTask(DeleteView):
     template_name = 'Main/delete.html'
     extra_context = {'title': 'Удаление задачи'}
 
-    # def get_success_url(self):
-    #     print('Hello world!!!')
-    #     return redirect(self.request.META.get('HTTP_REFERER'))
-
 
 class UpdateTask(UpdateView):
     model = Task
@@ -75,6 +71,6 @@ class UpdateTask(UpdateView):
     success_url = '/'
     extra_context = {'title': 'Редактирование задачи'}
 
-    # def get_success_url(self): # for the message
-    #     print('Hello world!!!')
-    #     return redirect(self.request.META.get('HTTP_REFERER'))
+
+def error404(request, exception=None):
+    return render(request, 'Main/404.html', {'title': 'Страница не найдена'}, status=404)
