@@ -1,0 +1,6 @@
+{% extends 'Main/base.html' %}
+
+{% block body %}
+  <h4 class="text-danger">Страница не найдена (Error404)</h4>
+  <a href="{% url 'activeTask' %}"><i class="fa-solid fa-bug-slash"></i></i>Вернуться к активным задачам</a>
+{% endblock %}
